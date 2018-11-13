@@ -1177,8 +1177,7 @@ section{
     }
     .works-menu{
         flex-wrap: wrap;
-        margin-bottom: -45px;
-        height: 100%;
+        height: 4vh;
     }
     .works-menu #all{
         width: 100%;
@@ -1204,6 +1203,9 @@ section{
     .works-image-on-hover-slogan{
         font-size: 60%;
         margin-top: 20px;
+    }
+    .works-container{
+        margin-top: 8vh;
     }
     .footer-img{
         margin-top: 30px;
