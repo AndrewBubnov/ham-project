@@ -458,7 +458,13 @@ function removeModal() {
     });
 
 //**********************************************************************************************************
-
+let photoSign = $('.photo-sign');
+    photoSign.on({'mouseenter' : function () {
+        $(this).text('Amazing image post').css('color', '#18cfab');
+    },
+    'mouseleave' : function () {
+        $(this).text('Amazing blog post').css('color', '');
+    }});
 }
 
 

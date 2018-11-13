@@ -382,7 +382,7 @@ section{
 }
 .gallery-block{
     margin-top: 7vh;
-    /*height: 65vh;*/
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -391,32 +391,20 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
-    height: 48%;
-    width: 25%;
+    width: 24%;
     max-width: 480px;
 }
 .photo-container:hover .photo:before{
     background-color: #18cfab;
 }
 .photo-sign {
-    font-size: 19px;
+    font-size: 16px;
     color: #717171;
     font-weight: bold;
-}
-.photo-container:hover .photo-sign{
-    display: none;
-}
-.photo-container:hover:after{
-    content: "Amazing image post";
-    display: block;
-    position: absolute;
-    top: 75%;
-    font-size: 1vw;
-    color: #18cfab;
-    font-weight: bold;
     text-align: center;
+    transition: color .5s;
 }
 .admin-sign {
     font-size: 15px;
@@ -446,6 +434,7 @@ section{
     top: 1px;
     right: 1px;
     background-color: #203e38;
+    transition: background-color .5s;
 }
 .photo-container:nth-child(2) .photo:before{
     right: 0;
@@ -1038,7 +1027,7 @@ section{
     transition: none;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 480px){
+@media screen and (max-width: 1200px) and (min-width: 480px) and (orientation: landscape){
     .nav-inner{
         width: 100%;
     }
@@ -1075,6 +1064,16 @@ section{
     }
     .works-image{
         height: 135px;
+    }
+    .photo-container:hover:after{
+        top: 82%;
+        font-size: 19px;
+    }
+    .gallery-block{
+        height: 60vh;
+    }
+    .photo-sign {
+        font-size: 12px;
     }
 }
 
