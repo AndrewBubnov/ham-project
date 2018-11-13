@@ -54,6 +54,7 @@ section{
     display: flex;
     align-items: center;
     margin-left: -2vw;
+
 }
 .logo-name{
     font-family: "Myriad Pro", sans-serif;
@@ -67,7 +68,7 @@ section{
 }
 .logo{
     width: 5.37vh;
-    height: 6.2vh;
+    /*height: 6.2vh;*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -259,12 +260,6 @@ section{
 .box-icon{
     height: 29%;
 }
-/*.services {*/
-    /*font-size: 225%;*/
-    /*color: rgb( 78, 78, 78 );*/
-    /*margin-top: 8vh;*/
-    /*position: relative;*/
-/*}*/
 .narrow-block{
     width: 100%;
     height: 100%;
@@ -387,7 +382,7 @@ section{
 }
 .gallery-block{
     margin-top: 7vh;
-    height: 65vh;
+    /*height: 65vh;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -432,6 +427,10 @@ section{
     height: 21.2vh;
     position: relative;
     overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
 }
 .photo:before{
     content: "25 \A Jul";
@@ -537,7 +536,6 @@ section{
 }
 
 .clip-circle{
-    /*clip-path: circle(48% at center);*/
     border-radius: 50%;
     border: 2px solid #18cfab;
     width: 20vh;
@@ -586,7 +584,7 @@ section{
 
 .works-menu{
     width: 100%;
-    height: 6vh;
+    height: 3vw;
     display: flex;
     margin-top: 7vh;
 }
@@ -603,6 +601,7 @@ section{
     align-items: center;
     cursor: pointer;
     user-select: none;
+    text-align: center;
 }
 .works-active{
  }
@@ -616,7 +615,6 @@ section{
     top: -3px;
 }
 .works-container{
-    /*width: 62.5vw;*/
     margin-top: 6.5vh;
     display: flex;
     justify-content: space-between;
@@ -626,6 +624,7 @@ section{
     width: 24.8%;
     height: 206px;
     margin-bottom: 2px;
+    background-position: center;
 }
 .works-image-on-hover{
     width: 100%;
@@ -1039,7 +1038,45 @@ section{
     transition: none;
 }
 
-
+@media screen and (max-width: 1200px) and (min-width: 480px){
+    .nav-inner{
+        width: 100%;
+    }
+    .works-menu{
+        height: 6vw;
+    }
+    .logo img{
+        height: 40px;
+    }
+    .logo-name{
+        margin-left: 12px;
+    }
+    .logo-container{
+        margin-left: 0;
+    }
+    .H{
+        font-size: 6vh;
+    }
+    .service-item{
+        height: 10vh;
+        font-size: 1em;
+    }
+    .service-item:hover:after{
+        top: 9vh;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #18cfab;
+    }
+    .service-menu-list{
+        margin-top: 10vh;
+    }
+    .service-description{
+        height: 35vh;
+    }
+    .works-image{
+        height: 135px;
+    }
+}
 
 @media screen and (max-width: 480px){
     #blog, #service, .navbar-nav, .nav-inner .fa.fa-search, .preloader{
@@ -1093,13 +1130,16 @@ section{
     }
 
     .logo img{
-        height: 10vh;
+        height: 12vw;
     }
     .H{
-        height: 40px;
+        font-size: 3.5vh;
     }
     .logo-name{
         margin-left: 15px;
+    }
+    .breaking-news{
+        margin-top: 6vh;
     }
     .slogan-1{
         font-size: 1.5em;
@@ -1127,9 +1167,18 @@ section{
     .ready-slogan{
         font-size: 1.8em;
     }
+    .works-active{
+        background-color: #18cfab;
+        color: #fff;
+        border: 1px solid #18cfab;
+    }
+    .works-active:before{
+        content: none;
+    }
     .works-menu{
         flex-wrap: wrap;
-        margin-bottom: 45px;
+        margin-bottom: -53px;
+        height: 100%;
     }
     .works-menu #all{
         width: 100%;
@@ -1188,6 +1237,7 @@ section{
         height: 150px;
     }
 }
+
 
 
 
