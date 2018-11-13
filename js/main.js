@@ -460,10 +460,10 @@ function removeModal() {
 //**********************************************************************************************************
 let photoSign = $('.photo-sign');
     photoSign.on({'mouseenter' : function () {
-        $(this).text('Amazing image post').css('color', '#18cfab');
+        $(this).text('Amazing image post');
     },
     'mouseleave' : function () {
-        $(this).text('Amazing blog post').css('color', '');
+        $(this).text('Amazing blog post');
     }});
 }
 

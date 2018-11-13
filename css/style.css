@@ -68,7 +68,6 @@ section{
 }
 .logo{
     width: 5.37vh;
-    /*height: 6.2vh;*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -405,6 +404,9 @@ section{
     font-weight: bold;
     text-align: center;
     transition: color .5s;
+}
+.photo-sign:hover{
+    color: #18cfab;
 }
 .admin-sign {
     font-size: 15px;
@@ -1073,7 +1075,7 @@ section{
         height: 60vh;
     }
     .photo-sign {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
