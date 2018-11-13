@@ -709,7 +709,8 @@ section{
 }
 .masonry-gallery{
     margin-top: 75px;
-    width: 100%;
+    width: 98%;
+    margin-left: 2%;
 }
 .grid-item, .grid-sizer{
     width: 31.333%;
@@ -1171,9 +1172,6 @@ section{
     }
     .employee{
         font-size: 5vw;
-    }
-    .masonry-gallery{
-        margin-left: 2%;
     }
     .footer{
         height: 30px;
