@@ -1141,7 +1141,7 @@ section{
     .menu-item{
         height: 0;
         position: absolute;
-        transition: .4s ease-out;
+        transition: .6s ease-out;
         overflow: hidden;
         width: 100%;
         display: flex;
