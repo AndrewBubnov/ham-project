@@ -448,14 +448,43 @@ function removeModal() {
     let second = document.querySelector('#two');
     let third = document.querySelector('#three');
     let menuItem = document.querySelector(".menu-item");
+
+
+    // hamburger.addEventListener('click', function () {
+    //     first.classList.toggle('first-start');
+    //     first.classList.toggle('first');
+    //     third.classList.toggle('third-start');
+    //     third.classList.toggle('third');
+    //     second.classList.toggle('second');
+    //     menuItem.classList.toggle('menu-active');
+    // });
+
+    let hamburgerOpen = false;
     hamburger.addEventListener('click', function () {
-        first.classList.toggle('first-start');
-        first.classList.toggle('first');
-        third.classList.toggle('third-start');
-        third.classList.toggle('third');
-        second.classList.toggle('second');
+        if (!hamburgerOpen){
+            first.classList.remove('first-start');
+            first.classList.remove('first-out');
+            first.classList.add('first-in');
+            third.classList.remove('third-start');
+            third.classList.remove('third-out');
+            third.classList.add('third-in');
+            second.classList.remove('second-out');
+            second.classList.add('second-in');
+
+
+        } else {
+            first.classList.remove('first-in');
+            first.classList.add('first-out');
+            third.classList.remove('third-in');
+            third.classList.add('third-out');
+            second.classList.remove('second-in');
+            second.classList.add('second-out');
+        }
+
+        hamburgerOpen = !hamburgerOpen;
         menuItem.classList.toggle('menu-active');
     });
+
 
 //**********************************************************************************************************
 let photoSign = $('.photo-sign');

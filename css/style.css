@@ -981,12 +981,12 @@ section{
     transition: .4s;
     position: absolute;
 }
-.first-start{
-    transform: translateY(-8px);
-}
-.third-start{
-    transform: translateY(8px);
-}
+/*.first-start{*/
+    /*transform: translateY(-8px);*/
+/*}*/
+/*.third-start{*/
+    /*transform: translateY(8px);*/
+/*}*/
 .hamburger-container{
     width: 30px;
     height: 24px;
@@ -999,26 +999,73 @@ section{
 .menu-item, .menu-item a{
     display: none;
 }
+
 .first-start{
     transform: translateY(-8px);
+
 }
 .third-start{
     transform: translateY(8px);
+
 }
-.first{
+.first-in{
     transform-origin: center;
-    transform: rotate(-45deg) translateY(0);
+    animation: first-in .8s cubic-bezier(.56,1.7,.34,.89) forwards;
 }
 
-.third{
+.third-in{
     transform-origin: center;
-    transform: rotate(45deg) translateY(0);
+    animation: third-in .8s cubic-bezier(.56,1.7,.34,.89) forwards;
 }
 
-.second{
-    transform: translateX(-30px);
+.second-in{
     opacity: 0;
 }
+.second-out{
+    animation: second-out .8s forwards;
+}
+.first-out{
+    transform-origin: center;
+    animation: first-out .8s ease forwards;
+}
+.third-out{
+    transform-origin: center;
+    animation: third-out .8s ease forwards;
+}
+@keyframes first-in {
+    from {transform: translateY(-8px)}
+    25% {transform: translateY(0)}
+    to {transform: translateY(0) rotate(-135deg)}
+}
+
+@keyframes third-in {
+    from {transform: translateY(8px)}
+    25% {transform: translateY(0)}
+    to {transform: translateY(0) rotate(135deg)}
+}
+@keyframes first-out {
+    25%, 100% {
+        animation-timing-function: cubic-bezier(.56,1.7,.34,.89);
+    }
+    from {transform: rotate(-135deg) translateY(0)}
+    25% {transform: rotate(0deg) translateY(0)}
+    to {transform: rotate(0deg) translateY(-8px)}
+}
+
+@keyframes third-out {
+    25%, 100% {
+       animation-timing-function: cubic-bezier(.56,1.7,.34,.89);
+    }
+    from {transform: rotate(135deg) translateY(0)}
+    25% {transform: rotate(0deg) translateY(0)}
+    to {transform: rotate(0deg) translateY(8px)}
+}
+@keyframes second-out {
+    0% {opacity: 0}
+    49% {opacity: 0}
+    50%, 100% {opacity: 1}
+}
+
 .testimony-container{
     position: relative;
     width: 100%;
